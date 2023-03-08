@@ -26,11 +26,11 @@
     },
     {"tag": "productinfo",
      "patterns": ["What products do you sell?", "what kind of products do you have?", "can you list down some products?"],
-     "responses": ["we sell electronics, computers and machines here.", "we offer a variety of products here. you can access it here http://localhost:3000/shop"]
+     "responses": ["we sell electronics, computers and machines here.", "we offer a variety of products here. you can access it here http://localhost:3000/shop", ""]
     },
-    {"tag": "ការគោរព",
-     "patterns": ["ជំរាបសួរ", "តើអ្នកសុខសប្បាយទេ", "មានមនុស្សនៅធ្វើការទេ?"],
-     "responses": ["ជំរាបសួរ", "ស្វាគមន៍មកកាន់ហាងរបស់យើង", "ជំរាបសួរ។ តើខ្ញុំអាចជួយអ្នកបានអ្វីខ្លះ?"]
+    {"tag": "storeinfo",
+     "patterns": ["How can I contact you?", "what is your contact information", "What is your email?", "What is your telephone number?"],
+     "responses": ["This is our contact information: +855 123 456 789, teapkevin@gmail.com", "More information can be seen at http://localhost:3000/contact"]
     }
 ]
 }
