@@ -105,7 +105,7 @@ try:
 
     model = tflearn.DNN(net)
 
-    model.load("../model.tflearn")
+    model.load("../model/model.tflearn")
 except:
 
     tensorflow.compat.v1.reset_default_graph()
