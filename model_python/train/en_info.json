@@ -1,256 +1,633 @@
-{"intents": [
-    {"tag": "greeting",
-     "patterns": ["Hi", "How are you", "Is anyone there?", "Hello", "Good day"],
-     "responses": ["Hello, thanks for visiting", "Good to see you again", "Hi there, how can I help?"],
-     "context_set": ""
-    },
-    {"tag": "goodbye",
-     "patterns": ["Bye", "See you later", "Goodbye"],
-     "responses": ["See you later, thanks for visiting", "Have a nice day", "Bye! Come back again soon."]
-    },
-    {"tag": "thanks",
-     "patterns": ["Thanks", "Thank you", "That's helpful"],
-     "responses": ["Happy to help!", "Any time!", "My pleasure"]
-    },
-    {"tag": "hours",
-     "patterns": ["What hours are you open?", "What are your hours?", "When are you open?" ],
-     "responses": ["We're open every day 9am-9pm", "Our hours are 9am-9pm every day"]
-    },
-    {"tag": "payments",
-     "patterns": ["Do you take credit cards?", "Do you accept Mastercard?", "Are you cash only?" ],
-     "responses": ["We accept VISA, Mastercard and Paypal", "We accept most major credit cards"]
-    },
-    {"tag": "openToday",
-     "patterns": ["Are you open today?", "When do you open today?", "What are your hours today?"],
-     "responses": ["We're open every day from 9am-9pm", "Our hours are 9am-9pm every day"]
-    },
-    {"tag": "productInfo",
-     "patterns": ["What products do you sell?", "what kind of products do you have?", "can you list down some products?"],
-     "responses": ["we sell electronics, computers and machines here.", "we offer a variety of products here. you can access it here http://localhost:3000/shop", ""]
-    },
-    {"tag": "storeInfo",
-     "patterns": ["How can I contact you?", "what is your contact information", "What is your email?", "What is your telephone number?","How do I contact customer service?"],
-     "responses": ["This is our contact information: +855 123 456 789, teapkevin@gmail.com", "More information can be seen at http://localhost:3000/contact"]
-    },
-    {"tag": "shippingOption",
-        "patterns": ["What are your shipping options?", ""],
-        "responses": ["We provide free shipping and flat shipping","There are two shipping options available including Free and Flat shipping"]
-    },
-    {"tag": "arrivalDuration",
-        "patterns": ["How long will products take for my order to arrive?", ""],
-        "responses": ["I will usually take around 3-5 business days.", "Your products will arrive in 3-5 working days."]
-    },
-    {"tag": "shippingCost",
-        "patterns": ["How much does shipping cost?", ""],
-        "responses": ["For free shipping, it is totally free. As fro flat shipping, it costs around 3$."]
-    },
-    {"tag": " returnPolicy",
-        "patterns": ["What is your return policy?"],
-        "responses": ["Currently, we do not have a return policy for our products. However, we aims to have it next year."]
-    },
-    {"tag": "Promotion",
-        "patterns": [" Do you offer discounts or promotions?", ""],
-        "responses": ["Unfortunately, we do not have discounts for our online products. However, we do offer some promotions at our local store."]
-    },
-    {"tag": "cancel",
-        "patterns": ["Can I cancel my order?", "How do I cancel my order?"],
-        "responses": ["You can contact us in order to cancel your order by emailing us at teapkevin@gmail.com."]
-    },
-    {"tag": "review",
-        "patterns": ["Can I leave a review for a product?", ""],
-        "responses": ["Unfortunately, reviews can not be made at the moment. It will be available in the future."]
-    },
-    {"tag": "orderByPhone",
-        "patterns": ["Can I order by phone?", ""],
-        "responses": ["Yes it is possible to order by phone through +855 123 456 789."]
-    },
-    {"tag": "shippingTime",
-        "patterns": [" How long does shipping take?", "How long will it take for my order to arrive?"],
-        "responses": ["I will usually take around 3-5 business days.", "Your products will arrive in 3-5 working days."]
-    },
-    {"tag": "paymentMethod",
-        "patterns": ["What payment methods do you accept?", ""],
-        "responses": ["We accept both cash and credit card payment","We accept both cash and cashless payment"]
-    },
-    {"tag": "changeShippingAddress",
-        "patterns": ["Can I change my shipping address after I place an order?", ""],
-        "responses": ["Unfortunately, we do not have this option at the moment."]
-    },
-    {"tag": "promotionCode",
-        "patterns": ["How do I use a promo code?", ""],
-        "responses": ["We do not offer promo code on our online store."]
-    },
-    {"tag": "multiplePromotionCode",
-        "patterns": ["Can I use multiple promo codes on one order?", ""],
-        "responses": ["We do not offer promo code on our online store."]
-    },
-    {"tag": "orderStatus",
-        "patterns": ["How do I check the status of my order?", ""],
-        "responses": ["The status of your order will be displayed in your profile page."]
-    },
-    {"tag": "changeOrder",
-        "patterns": ["Can I make changes to my order after it has been placed?", ""],
-        "responses": ["You can contact us in order to alter your order by emailing us at teapkevin@gmail.com."]
-    },
-    {"tag": "availabilityProduct",
-        "patterns": ["How do I check the availability of a product?", ""],
-        "responses": ["The status of each product will be displayed on individual product page."]
-    },
-    {"tag": "financingOption",
-        "patterns": ["Do you offer financing options?", ""],
-        "responses": ["Currently, we do not have this option."]
-    },
-    {"tag": "warranty",
-        "patterns": ["What is your warranty policy?", ""],
-        "responses": ["We have a one year warrantly policy for every product."]
-    },
-    {"tag": "applyPromoCode",
-        "patterns": ["Can I apply a promo code after I place an order?", ""],
-        "responses": ["We do not offer promo code on our online store."]
-    },
-    {"tag": "productsOutOfStock",
-        "patterns": ["Can I purchase a product that is out of stock?", ""],
-        "responses": ["Out of stock products can not be purchased."]
-    },
-    {"tag": "myself",
-        "patterns": ["Who are you?", "What is your chatbot's name?"],
-        "responses": ["My name is RUPP Bot. I was created by Tep Keven, You Vanneth, Sis Faelin and Phy Leakna. I was designed as a project in order to fulfill my creators' school requirements."]
-    },
-    {"tag": "membersOfWebsite",
-        "patterns": ["who is the member of this shop?", "how many members of this shop?"],
-        "responses": ["There are 4 owners of this shop including Tep Keven, You Vanneth, Sis Faelin and Phy Leakna."]
-    },
-    {"tag": "speakToHuman",
-        "patterns": ["Can I speak to a human customer service representative?", ""],
-        "responses": ["Of course. This is our contact information: +855 123 456 789, teapkevin@gmail.com", "Of course. More information can be seen at http://localhost:3000/contact"]
-    },
-    {"tag": "servicesProducts",
-        "patterns": ["Do you offer installation services for your products?", ""],
-        "responses": ["Unfortunately, we do not have installation services at the moment."]
-    },
-    {"tag": "referralProgram",
-        "patterns": ["What is your referral program?"],
-        "responses": ["We do not have a referral programs for our customers."]
-    },
-    {"tag": "loyaltyPoints",
-        "patterns": ["Can I earn loyalty points for writing product reviews?"],
-        "responses": ["We do not offer loyalty points for writing product reviews."]
-    },
-    {"tag": "productsRange",
-        "patterns": ["What is your price range for products?"],
-        "responses": ["Our products are affordable ranging from 100$ to around 500$."]
-    },
-    {"tag": "productsOnSale",
-        "patterns": ["How do I know if a product is on sale?"],
-        "responses": ["Product status will be displayed on the product page in order to indicate whether it is still on sale or out of sale."]
-    },
-    {"tag": "giftReceipt",
-        "patterns": ["Do you offer gift receipts?"],
-        "responses": ["No. Currently we do not offer gift receipts."]
-    },
-    {"tag": "refundForGift",
-        "patterns": ["Can I get a refund for a gift card?"],
-        "responses": ["We do not offer gift cards. Therefore, we do not give a refund for it."]
-    },
-    {"tag": "orderPickUp",
-        "patterns": ["Can I order a product for pick up in-store?"],
-        "responses": ["Yes. It is possible to pick up the products at our local store. "]
-    },
-    {"tag": "cancelOrderPickUp",
-        "patterns": ["Can I cancel my in-store pickup order?"],
-        "responses": ["Yes. It is possible to cancel an in-store pick up order."]
-    },
-    {"tag": "redeemPoints",
-        "patterns": ["How do I redeem my loyalty points?"],
-        "responses": ["We do not offer loyalty points at the moment."]
-    },
-    {"tag": "chatbotTime",
-        "patterns": ["What is your chatbot's response time?"],
-        "responses": ["Our chatbot's response time should be 24/7 365 days."]
-    },
-    {"tag": "orderHistory",
-        "patterns": ["Can I see my order history?"],
-        "responses": ["Yes it is possible to see your order history."]
-    },
-    {"tag": "viewWishlist",
-        "patterns": ["Can I view my wishlist?"],
-        "responses": ["We do not have wishlist at the moment."]
-    },
-    {"tag": "backOrderItem",
-        "patterns": ["What is your process for back-ordered items?"],
-        "responses": ["We do not offer back-ordered items. Every Items are already presented in the store. "]
-    },
-    {"tag": "returnNoPackaging",
-        "patterns": ["Can I return an item without the original packaging?"],
-        "responses": ["We do not offer a return policy for both items with packaging and items without packaging."]
-    },
-    {"tag": "exchangeItem",
-        "patterns": ["Can I exchange an item for a different size or color?"],
-        "responses": ["Of course. Items can be exchanged for a different color but not size."]
-    },
-    {"tag": "customerTruckOrder",
-        "patterns": ["How do I track my order?"],
-        "responses": ["Order tracking is not possible for our website at the moment."]
-    },
-    {"tag": "shippingPolicy",
-        "patterns": ["What is your shipping policy?"],
-        "responses": ["I will usually take around 3-5 business days.", "Your products will arrive in 3-5 working days."]
-    },
-    {"tag": "shipDifferentAddress",
-        "patterns": ["Can I ship to a different address than my billing address?"],
-        "responses": ["This is not possible as both billing address and shipping address are the same on our website. "]
-    },
-    {"tag": "messageTomyOrder",
-        "patterns": ["Can I add a gift message to my order?"],
-        "responses": ["Messages currently can not be added to orders."]
-    },
-    {"tag": "freeShipping",
-        "patterns": ["Do you offer free shipping?"],
-        "responses": ["Yes we do offer both free shipping and flat shipping."]
-    },
-    {"tag": "trackWithoutAccount",
-        "patterns": ["Can I track my order without an account?"],
-        "responses": ["Order tracking is not possible on our website."]
-    },
-    {"tag": "internationalShipping",
-        "patterns": ["Do you offer international shipping?"],
-        "responses": ["We do not offer international shipping at the moment."]
-    },
-    {"tag": "timeResponseEmail",
-        "patterns": ["What is your response time for email inquiries?"],
-        "responses": ["Email inquiries should be replied within 12-24 hours. "]
-    },
-    {"tag": "CustomizeProduct",
-        "patterns": ["Can I customize a product?"],
-        "responses": ["It is not possible to customize a product."]
-    },
-    {"tag": "cancellationPolicy",
-        "patterns": ["What is your cancellation policy?"],
-        "responses": ["Sorry!! We do not have cancellation policy at the moment."]
-    },
-    {"tag": "combinePromoCode",
-        "patterns": ["Can I combine promo codes?"],
-        "responses": ["We do not offer promo codes use at the moment."]
-    },
-    {"tag": "purchaseAsGuest",
-        "patterns": ["Can I purchase a product as a guest?"],
-        "responses": ["Products can be purchased as a guest without an account. However, signing in is recommended for better experience."]
-    },
-    {"tag": "productRestocked",
-        "patterns": ["How do I know if a product is restocked?"],
-        "responses": ["Product status will be displayed on individual product page for clarification."]
-    },
-    {"tag": "exchangeRate",
-        "patterns": ["What is your exchange rate for international orders?"],
-        "responses": ["Currently we do not have international shipping or orders."]
-    },
-    {"tag": "productReview",
-        "patterns": ["How do I leave a product review?"],
-        "responses": ["Product review is not available on our shop yet. However, it will be provided in the future."]
-    },
-    {"tag": "multipleCard",
-        "patterns": ["Can I use multiple gift cards for one purchase?"],
-        "responses": ["We do not accept gift cards, promo codes or referral codes at the moment. But it is currently being considered."]
-    }
+{
+    "intents": [
+        {
+            "tag": "greeting",
+            "patterns": [
+                "Hi",
+                "How are you",
+                "Is anyone there?",
+                "Hello",
+                "Good day"
+            ],
+            "responses": [
+                "Hello, thanks for visiting",
+                "Good to see you again",
+                "Hi there, how can I help?"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "goodbye",
+            "patterns": [
+                "Bye",
+                "See you later",
+                "Goodbye"
+            ],
+            "responses": [
+                "See you later, thanks for visiting",
+                "Have a nice day",
+                "Bye! Come back again soon."
+            ]
+        },
+        {
+            "tag": "thanks",
+            "patterns": [
+                "Thanks",
+                "Thank you",
+                "That's helpful"
+            ],
+            "responses": [
+                "Happy to help!",
+                "Any time!",
+                "My pleasure"
+            ]
+        },
+        {
+            "tag": "hours",
+            "patterns": [
+                "What hours are you open?",
+                "What are your hours?",
+                "When are you open?"
+            ],
+            "responses": [
+                "We're open every day 9am-9pm",
+                "Our hours are 9am-9pm every day"
+            ]
+        },
+        {
+            "tag": "payments",
+            "patterns": [
+                "Do you take credit cards?",
+                "Do you accept Mastercard?",
+                "Are you cash only?"
+            ],
+            "responses": [
+                "We accept VISA, Mastercard and Paypal",
+                "We accept most major credit cards"
+            ]
+        },
+        {
+            "tag": "openToday",
+            "patterns": [
+                "Are you open today?",
+                "When do you open today?",
+                "What are your hours today?"
+            ],
+            "responses": [
+                "We're open every day from 9am-9pm",
+                "Our hours are 9am-9pm every day"
+            ]
+        },
+        {
+            "tag": "productInfo",
+            "patterns": [
+                "What products do you sell?",
+                "what kind of products do you have?",
+                "can you list down some products?"
+            ],
+            "responses": [
+                "we sell electronics, computers and machines here.",
+                "we offer a variety of products here. you can access it here http://localhost:3000/shop",
+                ""
+            ]
+        },
+        {
+            "tag": "storeInfo",
+            "patterns": [
+                "How can I contact you?",
+                "what is your contact information",
+                "What is your email?",
+                "What is your telephone number?",
+                "How do I contact customer service?"
+            ],
+            "responses": [
+                "This is our contact information: +855 123 456 789, teapkevin@gmail.com",
+                "More information can be seen at http://localhost:3000/contact"
+            ]
+        },
+        {
+            "tag": "shippingOption",
+            "patterns": [
+                "What are your shipping options?",
+                ""
+            ],
+            "responses": [
+                "We provide free shipping and flat shipping",
+                "There are two shipping options available including Free and Flat shipping"
+            ]
+        },
+        {
+            "tag": "arrivalDuration",
+            "patterns": [
+                "How long will products take for my order to arrive?",
+                ""
+            ],
+            "responses": [
+                "I will usually take around 3-5 business days.",
+                "Your products will arrive in 3-5 working days."
+            ]
+        },
+        {
+            "tag": "shippingCost",
+            "patterns": [
+                "How much does shipping cost?",
+                ""
+            ],
+            "responses": [
+                "For free shipping, it is totally free. As fro flat shipping, it costs around 3$."
+            ]
+        },
+        {
+            "tag": " returnPolicy",
+            "patterns": [
+                "What is your return policy?"
+            ],
+            "responses": [
+                "Currently, we do not have a return policy for our products. However, we aims to have it next year."
+            ]
+        },
+        {
+            "tag": "Promotion",
+            "patterns": [
+                " Do you offer discounts or promotions?",
+                ""
+            ],
+            "responses": [
+                "Unfortunately, we do not have discounts for our online products. However, we do offer some promotions at our local store."
+            ]
+        },
+        {
+            "tag": "cancel",
+            "patterns": [
+                "Can I cancel my order?",
+                "How do I cancel my order?"
+            ],
+            "responses": [
+                "You can contact us in order to cancel your order by emailing us at teapkevin@gmail.com."
+            ]
+        },
+        {
+            "tag": "review",
+            "patterns": [
+                "Can I leave a review for a product?",
+                ""
+            ],
+            "responses": [
+                "Unfortunately, reviews can not be made at the moment. It will be available in the future."
+            ]
+        },
+        {
+            "tag": "orderByPhone",
+            "patterns": [
+                "Can I order by phone?",
+                ""
+            ],
+            "responses": [
+                "Yes it is possible to order by phone through +855 123 456 789."
+            ]
+        },
+        {
+            "tag": "shippingTime",
+            "patterns": [
+                " How long does shipping take?",
+                "How long will it take for my order to arrive?"
+            ],
+            "responses": [
+                "I will usually take around 3-5 business days.",
+                "Your products will arrive in 3-5 working days."
+            ]
+        },
+        {
+            "tag": "paymentMethod",
+            "patterns": [
+                "What payment methods do you accept?",
+                ""
+            ],
+            "responses": [
+                "We accept both cash and credit card payment",
+                "We accept both cash and cashless payment"
+            ]
+        },
+        {
+            "tag": "changeShippingAddress",
+            "patterns": [
+                "Can I change my shipping address after I place an order?",
+                ""
+            ],
+            "responses": [
+                "Unfortunately, we do not have this option at the moment."
+            ]
+        },
+        {
+            "tag": "promotionCode",
+            "patterns": [
+                "How do I use a promo code?",
+                ""
+            ],
+            "responses": [
+                "We do not offer promo code on our online store."
+            ]
+        },
+        {
+            "tag": "multiplePromotionCode",
+            "patterns": [
+                "Can I use multiple promo codes on one order?",
+                ""
+            ],
+            "responses": [
+                "We do not offer promo code on our online store."
+            ]
+        },
+        {
+            "tag": "orderStatus",
+            "patterns": [
+                "How do I check the status of my order?",
+                ""
+            ],
+            "responses": [
+                "The status of your order will be displayed in your profile page."
+            ]
+        },
+        {
+            "tag": "changeOrder",
+            "patterns": [
+                "Can I make changes to my order after it has been placed?",
+                ""
+            ],
+            "responses": [
+                "You can contact us in order to alter your order by emailing us at teapkevin@gmail.com."
+            ]
+        },
+        {
+            "tag": "availabilityProduct",
+            "patterns": [
+                "How do I check the availability of a product?",
+                ""
+            ],
+            "responses": [
+                "The status of each product will be displayed on individual product page."
+            ]
+        },
+        {
+            "tag": "financingOption",
+            "patterns": [
+                "Do you offer financing options?",
+                ""
+            ],
+            "responses": [
+                "Currently, we do not have this option."
+            ]
+        },
+        {
+            "tag": "warranty",
+            "patterns": [
+                "What is your warranty policy?",
+                ""
+            ],
+            "responses": [
+                "We have a one year warrantly policy for every product."
+            ]
+        },
+        {
+            "tag": "applyPromoCode",
+            "patterns": [
+                "Can I apply a promo code after I place an order?",
+                ""
+            ],
+            "responses": [
+                "We do not offer promo code on our online store."
+            ]
+        },
+        {
+            "tag": "productsOutOfStock",
+            "patterns": [
+                "Can I purchase a product that is out of stock?",
+                ""
+            ],
+            "responses": [
+                "Out of stock products can not be purchased."
+            ]
+        },
+        {
+            "tag": "myself",
+            "patterns": [
+                "Who are you?",
+                "What is your chatbot's name?"
+            ],
+            "responses": [
+                "My name is RUPP Bot. I was created by Tep Keven, You Vanneth, Sis Faelin and Phy Leakna. I was designed as a project in order to fulfill my creators' school requirements."
+            ]
+        },
+        {
+            "tag": "membersOfWebsite",
+            "patterns": [
+                "who is the member of this shop?",
+                "how many members of this shop?"
+            ],
+            "responses": [
+                "There are 4 owners of this shop including Tep Keven, You Vanneth, Sis Faelin and Phy Leakna."
+            ]
+        },
+        {
+            "tag": "speakToHuman",
+            "patterns": [
+                "Can I speak to a human customer service representative?",
+                ""
+            ],
+            "responses": [
+                "Of course. This is our contact information: +855 123 456 789, teapkevin@gmail.com",
+                "Of course. More information can be seen at http://localhost:3000/contact"
+            ]
+        },
+        {
+            "tag": "servicesProducts",
+            "patterns": [
+                "Do you offer installation services for your products?",
+                ""
+            ],
+            "responses": [
+                "Unfortunately, we do not have installation services at the moment."
+            ]
+        },
+        {
+            "tag": "referralProgram",
+            "patterns": [
+                "What is your referral program?"
+            ],
+            "responses": [
+                "We do not have a referral programs for our customers."
+            ]
+        },
+        {
+            "tag": "loyaltyPoints",
+            "patterns": [
+                "Can I earn loyalty points for writing product reviews?"
+            ],
+            "responses": [
+                "We do not offer loyalty points for writing product reviews."
+            ]
+        },
+        {
+            "tag": "productsRange",
+            "patterns": [
+                "What is your price range for products?"
+            ],
+            "responses": [
+                "Our products are affordable ranging from 100$ to around 500$."
+            ]
+        },
+        {
+            "tag": "productsOnSale",
+            "patterns": [
+                "How do I know if a product is on sale?"
+            ],
+            "responses": [
+                "Product status will be displayed on the product page in order to indicate whether it is still on sale or out of sale."
+            ]
+        },
+        {
+            "tag": "giftReceipt",
+            "patterns": [
+                "Do you offer gift receipts?"
+            ],
+            "responses": [
+                "No. Currently we do not offer gift receipts."
+            ]
+        },
+        {
+            "tag": "refundForGift",
+            "patterns": [
+                "Can I get a refund for a gift card?"
+            ],
+            "responses": [
+                "We do not offer gift cards. Therefore, we do not give a refund for it."
+            ]
+        },
+        {
+            "tag": "orderPickUp",
+            "patterns": [
+                "Can I order a product for pick up in-store?"
+            ],
+            "responses": [
+                "Yes. It is possible to pick up the products at our local store. "
+            ]
+        },
+        {
+            "tag": "cancelOrderPickUp",
+            "patterns": [
+                "Can I cancel my in-store pickup order?"
+            ],
+            "responses": [
+                "Yes. It is possible to cancel an in-store pick up order."
+            ]
+        },
+        {
+            "tag": "redeemPoints",
+            "patterns": [
+                "How do I redeem my loyalty points?"
+            ],
+            "responses": [
+                "We do not offer loyalty points at the moment."
+            ]
+        },
+        {
+            "tag": "chatbotTime",
+            "patterns": [
+                "What is your chatbot's response time?"
+            ],
+            "responses": [
+                "Our chatbot's response time should be 24/7 365 days."
+            ]
+        },
+        {
+            "tag": "orderHistory",
+            "patterns": [
+                "Can I see my order history?"
+            ],
+            "responses": [
+                "Yes it is possible to see your order history."
+            ]
+        },
+        {
+            "tag": "viewWishlist",
+            "patterns": [
+                "Can I view my wishlist?"
+            ],
+            "responses": [
+                "We do not have wishlist at the moment."
+            ]
+        },
+        {
+            "tag": "backOrderItem",
+            "patterns": [
+                "What is your process for back-ordered items?"
+            ],
+            "responses": [
+                "We do not offer back-ordered items. Every Items are already presented in the store. "
+            ]
+        },
+        {
+            "tag": "returnNoPackaging",
+            "patterns": [
+                "Can I return an item without the original packaging?"
+            ],
+            "responses": [
+                "We do not offer a return policy for both items with packaging and items without packaging."
+            ]
+        },
+        {
+            "tag": "exchangeItem",
+            "patterns": [
+                "Can I exchange an item for a different size or color?"
+            ],
+            "responses": [
+                "Of course. Items can be exchanged for a different color but not size."
+            ]
+        },
+        {
+            "tag": "customerTruckOrder",
+            "patterns": [
+                "How do I track my order?"
+            ],
+            "responses": [
+                "Order tracking is not possible for our website at the moment."
+            ]
+        },
+        {
+            "tag": "shippingPolicy",
+            "patterns": [
+                "What is your shipping policy?"
+            ],
+            "responses": [
+                "I will usually take around 3-5 business days.",
+                "Your products will arrive in 3-5 working days."
+            ]
+        },
+        {
+            "tag": "shipDifferentAddress",
+            "patterns": [
+                "Can I ship to a different address than my billing address?"
+            ],
+            "responses": [
+                "This is not possible as both billing address and shipping address are the same on our website. "
+            ]
+        },
+        {
+            "tag": "messageTomyOrder",
+            "patterns": [
+                "Can I add a gift message to my order?"
+            ],
+            "responses": [
+                "Messages currently can not be added to orders."
+            ]
+        },
+        {
+            "tag": "freeShipping",
+            "patterns": [
+                "Do you offer free shipping?"
+            ],
+            "responses": [
+                "Yes we do offer both free shipping and flat shipping."
+            ]
+        },
+        {
+            "tag": "trackWithoutAccount",
+            "patterns": [
+                "Can I track my order without an account?"
+            ],
+            "responses": [
+                "Order tracking is not possible on our website."
+            ]
+        },
+        {
+            "tag": "internationalShipping",
+            "patterns": [
+                "Do you offer international shipping?"
+            ],
+            "responses": [
+                "We do not offer international shipping at the moment."
+            ]
+        },
+        {
+            "tag": "timeResponseEmail",
+            "patterns": [
+                "What is your response time for email inquiries?"
+            ],
+            "responses": [
+                "Email inquiries should be replied within 12-24 hours. "
+            ]
+        },
+        {
+            "tag": "CustomizeProduct",
+            "patterns": [
+                "Can I customize a product?"
+            ],
+            "responses": [
+                "It is not possible to customize a product."
+            ]
+        },
+        {
+            "tag": "cancellationPolicy",
+            "patterns": [
+                "What is your cancellation policy?"
+            ],
+            "responses": [
+                "Sorry!! We do not have cancellation policy at the moment."
+            ]
+        },
+        {
+            "tag": "combinePromoCode",
+            "patterns": [
+                "Can I combine promo codes?"
+            ],
+            "responses": [
+                "We do not offer promo codes use at the moment."
+            ]
+        },
+        {
+            "tag": "purchaseAsGuest",
+            "patterns": [
+                "Can I purchase a product as a guest?"
+            ],
+            "responses": [
+                "Products can be purchased as a guest without an account. However, signing in is recommended for better experience."
+            ]
+        },
+        {
+            "tag": "productRestocked",
+            "patterns": [
+                "How do I know if a product is restocked?"
+            ],
+            "responses": [
+                "Product status will be displayed on individual product page for clarification."
+            ]
+        },
+        {
+            "tag": "exchangeRate",
+            "patterns": [
+                "What is your exchange rate for international orders?"
+            ],
+            "responses": [
+                "Currently we do not have international shipping or orders."
+            ]
+        },
+        {
+            "tag": "productReview",
+            "patterns": [
+                "How do I leave a product review?"
+            ],
+            "responses": [
+                "Product review is not available on our shop yet. However, it will be provided in the future."
+            ]
+        },
+        {
+            "tag": "multipleCard",
+            "patterns": [
+                "Can I use multiple gift cards for one purchase?"
+            ],
+            "responses": [
+                "We do not accept gift cards, promo codes or referral codes at the moment. But it is currently being considered."
+            ]
+        }
     ]
 }

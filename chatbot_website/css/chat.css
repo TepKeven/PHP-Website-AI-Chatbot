@@ -1,0 +1,59 @@
+.chatbox-content{
+    position: fixed;
+    bottom: 40px;
+    right: 20px;
+    z-index: 999;
+}
+
+.chatbox-popup{
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: rgb(172, 100, 236);
+    padding: 15px 0px;
+}
+
+.chat-heading{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:70px;
+    background-color: rgb(172, 100, 236);
+    color:white;
+}
+
+#content{
+    background: url("https://static.vecteezy.com/system/resources/previews/004/968/002/original/cute-abstract-modern-background-free-vector.jpg");
+    background-size: 100% 100%;
+    height:350px;
+    width:350px;
+    overflow-y: scroll;
+    padding: 15px;
+}
+
+#content::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+#content {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.user-chat{
+    text-align: right;
+    padding: 10px;
+    background-color: rgb(241, 241, 241);
+    border-radius: 10px;
+    max-width: 250px;
+}
+
+.bot-chat{
+    text-align: left;
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+    max-width: 250px;
+}
+  
